@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <section class="login">
+        <div class="login-card">
+            <div class="image-section">
+                <img src="assets/images/image.png" alt="">
+            </div>
+            <div class="form-section">
+                <div class="top text-end">
+                    <span>Not Registered Yet?</span>
+                    <a href="register.html" class="btn btn-outline-light ms-2">SIGN UP</a>
+                </div>
+                <div class="form-content mt-5">
+                    <div class="heading">Welcome back to Automagic!</div>
+                    <form action="" method="post">
+                        <span class="tagline">Login your account</span>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-3 password">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                            <i class="far fa-eye" id="togglePassword"></i>
+                        </div>
+                        <div class="success-box">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Password must be At least 8 characters long!</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <button class="btn solid-action-btn" type="button" disabled>
+                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                    Loading...
+                                </button>
+                                <!-- <input type="submit" value="Login" class="btn solid-action-btn mb-3"> -->
+                            </div>
+                            <div class="col-6 text-end">
+                                <a href="forgotpassword.html" class="forgot-link">Forgot Password?</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="bottom mt-5">
+                    <span class="sep-line"><b>or Login using</b></span>
+                    <!-- <span class="me-2">Create account with </span> -->
+                    <span class="social-btn">
+                        <img src="assets/images/icon/facebook-icon.png" alt="">
+                    </span>
+                    <span class="social-btn">
+                        <img src="assets/images/icon/linkdin-icon.png" alt="">
+                    </span>
+                    <span class="social-btn">
+                        <img src="assets/images/icon/google-icon.png" alt="">
+                    </span>
+                    <small class="concent-line d-block text-center mt-3">By Continuing you agree to the <br>
+                        <a href="terms-conditions.php" target="_blank">Terms of Services</a> and <a href="privacy-policy.php" target="_blank">Privacy policy</a>.
+                    </small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

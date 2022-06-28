@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#21395f">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://kit.fontawesome.com/4e1eba2436.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/29.2.0/classic/ckeditor.js"></script>
+    <link rel="icon" href="assets/images/icon.png" type="image">
+</head>
+<body>
+    <section class="sidebar" id="sidebar">
+        <div class="head">
+            <div class="logo">
+                <img src="assets/images/Logo.png" alt="">
+            </div>
+        </div>
+        <div class="body">
+            <a href="dashboard.html">
+                <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                <span class="name">DASHBOARD</span>
+            </a>
+            <h6>MAIN MENU</h6>
+            <div class="drop">
+                <a href="#">
+                    <span class="icon"><i class="fas fa-book-open"></i></span>
+                    <span class="name">Campaign</span>
+                </a>
+                <span class="add-cat" id="campaign"><i class="fas fa-chevron-circle-down"></i></span>
+                <div class="dropdown campaign" style="display: none;">
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-plus"></i></span>
+                        <span class="name">Create Campaign</span>
+                    </a>
+                </div>
+            </div>
+            <div class="drop active">
+                <a href="contact.html">
+                    <span class="icon"><i class="fas fa-users"></i></span>
+                    <span class="name">Contacts</span>
+                </a>
+                <span class="add-cat" id="category"><i class="fas fa-chevron-circle-down"></i></span>
+                <div class="dropdown category" style="display: none;">
+                    <a href="contact.html">
+                        <span class="icon"><i class="fas fa-layer-group"></i></span>
+                        <span class="name">Categories</span>
+                    </a>
+                </div>
+            </div>
+            <script>
+                $(document).ready(function(){
+                    $(".add-cat").click(function(){
+                        var id = $(this).attr("id");
+                        $("."+id).toggle();
+                    });
+                });
+            </script>
+            <a href="#">
+                <span class="icon"><i class="fas fa-user"></i></span>
+                <span class="name">Sender</span>
+            </a>
+            <a href="#">
+                <span class="icon"><i class="fas fa-sliders-h"></i></span>
+                <span class="name">Settings</span>
+            </a>
+        </div>
+    </section>
+    <header>
+        <div class="head">
+            <div class="btnmenu">
+                <div class="bars top"></div>
+                <div class="bars center"></div>
+                <div class="bars bottom"></div>
+            </div>
+            <div class="notify">
+                <span class="icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="count">45</span>
+                </span>
+                <span class="icon">
+                    <i class="fas fa-comments"></i>
+                    <span class="count">17</span>
+                </span>
+            </div>
+            <div class="sub-admin">
+                <div class="pic">
+                    <img src="assets/images/pic.jpg" alt="Faculty">
+                </div>
+                <div class="title">
+                    <strong>Ankit Varshney</strong>
+                    <small>User</small>
+                </div>
+                <i class="fas fa-caret-down"></i>
+                <div class="dropdown">
+                    <a href="#" class="item">Profile</a>
+                    <a href="" class="item">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="content" id="content">
+        <div class="contact">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-12 col-md-3">
+                        <div class="heading">Contacts</div>
+                    </div>
+                    <div class="col-12 col-md-9 text-end mt-sm-2">
+                        <div class="row g-0 justify-content-md-end">
+                            <div class="col-6 col-sm-auto me-sm-1">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Select Category</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="col-6 col-sm-auto">
+                                <button class="btn btn-apply" id="import-contact"><i class="fas fa-file-upload me-sm-1"></i><span class="d-none d-sm-inline-block">Import Contacts</span></button>
+                                <button class="btn btn-apply" id="add-contact"><i class="fas fa-plus me-sm-1"></i><span class="d-none d-sm-inline-block">Add Contacts</span></button>
+                                <button class="btn btn-success"><i class="fa fa-refresh"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <div class="table-responsive-lg">
+                            <table class="table table-bordered">
+                                <thead class="table-dark">
+                                  <tr>
+                                    <th scope="col">Email Id <i class="fas fa-sort ms-2"></i></th>
+                                    <th scope="col">First Name <i class="fas fa-sort ms-2"></i></th>
+                                    <th scope="col">Last Name <i class="fas fa-sort ms-2"></i></th>
+                                    <th scope="col">Phone Number <i class="fas fa-sort ms-2"></i></th>
+                                    <th scope="col">Created At <i class="fas fa-sort ms-2"></i></th>
+                                    <th scope="col">Updated At <i class="fas fa-sort ms-2"></i> </th>
+                                    <th scope="col" class="text-center">Action</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                      <td>ankitvarshney1810@gmail.com</td>
+                                      <td>Ankit</td>
+                                      <td>Varshney</td>
+                                      <td>9876543210</td>
+                                      <td>DD/MM/YYYY</td>
+                                      <td>DD/MM/YYYY</td>
+                                      <td class="d-flex">
+                                        <a href="#" onclick="return confirm('Are you sure you want to delete this item?');" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                                        <a href="#" class="btn btn-secondary ms-1"><i class="fas fa-pen"></i></a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>ankitvarshney1810@gmail.com</td>
+                                      <td>Ankit</td>
+                                      <td>Varshney</td>
+                                      <td>9876543210</td>
+                                      <td>DD/MM/YYYY</td>
+                                      <td>DD/MM/YYYY</td>
+                                      <td>
+                                        <a href="#" onclick="return confirm('Are you sure you want to delete this item?');" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                                        <a href="#" class="btn btn-secondary"><i class="fas fa-pen"></i></a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>ankitvarshney1810@gmail.com</td>
+                                      <td>Ankit</td>
+                                      <td>Varshney</td>
+                                      <td>9876543210</td>
+                                      <td>DD/MM/YYYY</td>
+                                      <td>DD/MM/YYYY</td>
+                                      <td>
+                                        <a href="#" onclick="return confirm('Are you sure you want to delete this item?');" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                                        <a href="#" class="btn btn-secondary"><i class="fas fa-pen"></i></a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>ankitvarshney1810@gmail.com</td>
+                                      <td>Ankit</td>
+                                      <td>Varshney</td>
+                                      <td>9876543210</td>
+                                      <td>DD/MM/YYYY</td>
+                                      <td>DD/MM/YYYY</td>
+                                      <td>
+                                        <a href="#" onclick="return confirm('Are you sure you want to delete this item?');" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                                        <a href="#" class="btn btn-secondary"><i class="fas fa-pen"></i></a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>ankitvarshney1810@gmail.com</td>
+                                      <td>Ankit</td>
+                                      <td>Varshney</td>
+                                      <td>9876543210</td>
+                                      <td>DD/MM/YYYY</td>
+                                      <td>DD/MM/YYYY</td>
+                                      <td>
+                                        <a href="#" onclick="return confirm('Are you sure you want to delete this item?');" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                                        <a href="#" class="btn btn-secondary"><i class="fas fa-pen"></i></a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>ankitvarshney1810@gmail.com</td>
+                                      <td>Ankit</td>
+                                      <td>Varshney</td>
+                                      <td>9876543210</td>
+                                      <td>DD/MM/YYYY</td>
+                                      <td>DD/MM/YYYY</td>
+                                      <td>
+                                        <a href="#" onclick="return confirm('Are you sure you want to delete this item?');" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                                        <a href="#" class="btn btn-secondary"><i class="fas fa-pen"></i></a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>ankitvarshney1810@gmail.com</td>
+                                      <td>Ankit</td>
+                                      <td>Varshney</td>
+                                      <td>9876543210</td>
+                                      <td>DD/MM/YYYY</td>
+                                      <td>DD/MM/YYYY</td>
+                                      <td>
+                                        <a href="#" onclick="return confirm('Are you sure you want to delete this item?');" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                                        <a href="#" class="btn btn-secondary"><i class="fas fa-pen"></i></a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>ankitvarshney1810@gmail.com</td>
+                                      <td>Ankit</td>
+                                      <td>Varshney</td>
+                                      <td>9876543210</td>
+                                      <td>DD/MM/YYYY</td>
+                                      <td>DD/MM/YYYY</td>
+                                      <td>
+                                        <a href="#" onclick="return confirm('Are you sure you want to delete this item?');" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                                        <a href="#" class="btn btn-secondary"><i class="fas fa-pen"></i></a>
+                                      </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="empty-tag">
+                            <img src="assets/images/nodata.gif" alt="">
+                        </div>
+                    </div>
+                </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link">Previous</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <div class="model import-contact">
+        <div class="new">
+            <div class="row">
+                <di class="col mb-2">
+                    <h4>Import Contacts</h4>
+                </di>
+            </div>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-md-12 mb-2">
+                        <div>
+                            <div class="row">
+                                <div class="col-6 align-self-end">
+                                    <label for="formFile" class="form-label">CSV File </label>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <button class="btn btn-secondary btn-sm mb-2"><i class="fas fa-file-download me-2"></i>Sample</button>
+                                </div>
+                            </div>
+                            <input class="form-control" type="file" id="formFile">
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-2">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="number" class="mb-1">Category</label>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <a href="" class="add_category"><i class="fas fa-plus me-sm-1"></i>Add Category</a>
+                                </div>
+                            </div>
+                            <ul class="category">
+                                <li>
+                                    <input type="checkbox" name="category" class="send-check" id="t1" value="">
+                                    <label for="t1">Kuch bhi ho sakti hai</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="category" class="send-check" id="t2" value="">
+                                    <label for="t2">Kuch bhi</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="category" class="send-check" id="t3" value="">
+                                    <label for="t3">Kuch to hogi hi</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="category" class="send-check" id="t4" value="">
+                                    <label for="t4">Kuch bhi man lo</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="category" class="send-check" id="t5" value="">
+                                    <label for="t5">Kuch bhi ho sakti hai</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="category" class="send-check" id="t6" value="">
+                                    <label for="t6">Kuch bhi ho sakti hai</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col text-right">
+                        <input type="submit" name="submit" class="btn btn-apply" value="Submit and Close">
+                        <input type="submit" name="submit" class="btn btn-apply-outline" value="Submit and Add New">
+                    </div>
+                </div>
+            </form>
+            <div class="close">
+                <img src="assets/images/close.svg">
+            </div>
+        </div>
+    </div>
+    <div class="model add-contact">
+        <div class="new">
+            <div class="row">
+                <di class="col mb-2">
+                    <h4>Add Contacts</h4>
+                </di>
+            </div>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-md-12 mb-2">
+                        <div class="form-group">
+                            <label for="no_of_team">Email Address</label>
+                            <input type="email" name="email" class="form-control mt-1" id="email" placeholder="Enter Your Email" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-2">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" name="firstName" class="form-control mt-1" id="firstName" placeholder="Enter First Name" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-2">
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" name="lastName" class="form-control mt-1" id="lastName" placeholder="Enter Last Name" required>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-2">
+                        <div class="form-group">
+                            <label for="number">Phone Number</label>
+                            <div class="row g-0">
+                                <div class="col-2">
+                                    <select class="form-select  mt-1" aria-label="Default select example">
+                                        <option selected>+91</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="col-10">
+                                    <input type="text" name="number" class="form-control mt-1" id="number" placeholder="Enter Your Phone Number" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-2">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="number" class="mb-1">Category</label>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <a href="" class="add_category"><i class="fas fa-plus me-sm-1"></i>Add Category</a>
+                                </div>
+                            </div>
+                            <ul class="category">
+                                <li>
+                                    <input type="checkbox" name="category" class="send-check" id="t1" value="">
+                                    <label for="t1">Kuch bhi ho sakti hai</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="category" class="send-check" id="t2" value="">
+                                    <label for="t2">Kuch bhi</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="category" class="send-check" id="t3" value="">
+                                    <label for="t3">Kuch to hogi hi</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="category" class="send-check" id="t4" value="">
+                                    <label for="t4">Kuch bhi man lo</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="category" class="send-check" id="t5" value="">
+                                    <label for="t5">Kuch bhi ho sakti hai</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="category" class="send-check" id="t6" value="">
+                                    <label for="t6">Kuch bhi ho sakti hai</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col text-right">
+                        <input type="submit" name="submit" class="btn btn-apply" value="Submit and Close">
+                        <input type="submit" name="submit" class="btn btn-apply-outline" value="Submit and Add New">
+                    </div>
+                </div>
+            </form>
+            <div class="close">
+                <img src="assets/images/close.svg">
+            </div>
+        </div>
+    </div>
+    <div class="model success-model">
+        <div class="new">
+            <div class="row">
+                <div class="col mb-2 text-center">
+                    <img src="assets/images/success.gif" alt="">
+                    <h3>Success!</h3>
+                    <p>Message that you want..</p>
+                    <button class="btn solid-action-btn">Continue</button>
+                </div>
+            </div>
+            <div class="close">
+                <img src="assets/images/close.svg">
+            </div>
+        </div>
+    </div>
+    <div class="model failed-model">
+        <div class="new">
+            <div class="row">
+                <div class="col mb-2 text-center">
+                    <img src="assets/images/failed.gif" alt="">
+                    <h3 class="text-danger">OOOPS!</h3>
+                    <p>Message that you want..</p>
+                    <button class="btn btn-danger rounded-pill ps-4 pe-4">Try Again</button>
+                </div>
+            </div>
+            <div class="close">
+                <img src="assets/images/close.svg">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-md-7 text-center text-md-start align-self-center">
+                    <span class="copyright">© 2022 Automagic. All Rights Reserved</span>
+                </div>
+                <div class="col-md-5 d-grid d-md-block align-self-center">
+                    <div class="footer-social-list">
+                        <ul class="list-inline top-margin-20">
+                            <li>
+                                <a href="" target="blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="blank">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="blank">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="blank">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="blank">
+                                    <i class="fab fa-pinterest-p"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

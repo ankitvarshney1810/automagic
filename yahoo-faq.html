@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#21395f">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <script src="https://kit.fontawesome.com/4e1eba2436.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/29.2.0/classic/ckeditor.js"></script>
+    <link rel="icon" href="assets/images/icon.png" type="image">
+</head>
+<body>
+    <header class="scroll-header">
+        <a href="" class="site-name"><img src="assets/images/Logo.png" alt="" class="light-logo"><img src="assets/images/Logo-light.png" alt="" class="dark-logo"></a>
+        <nav>
+            <a href="index.html" class="link active">Home<span class="line"></span></a>
+            <a href="index.html" class="link">About<span class="line"></span></a>
+            <a href="index.html" class="link">Contact<span class="line"></span></a>
+            <a href="index.html" class="link">Campaign<span class="line"></span></a>
+        </nav>
+        <div class="btnm">
+            <div class="btnmenu">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="about-heading">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <span>Yahoo-AOL Password Setup</span>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <section class="setup-faq">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <p>I want to show you how to connect to Yahoo! Mail account via SMTP and send an email to the same account. If you can send an email from and to the same account, you can use it to send any addresses.</p>
+                    <p>Anyways, the same functionality can be used on a Google mail account. In fact, I got it working with a Google mail account before I changed the hard code account info to a Yahoo! Mail account. The reason I did that is security. With Google account, I had to go to my security configuration page to turn on the setting allowing 3rd party application to access my Google mail account. It was a simple switch that you can flip on and off. To me, this was not secure enough.</p>
+                    <p>Yahoo! Mail, on the other hand, uses a more secure way to allow my application to access my own mail account. Then I can get to my security configuration, enable my mail to allow 3rd party application to access. Here comes a twist, instead of a switch where I can turn on/off the mail access, I had to create a separated passcode for the 3rd party application. It is different from Google Mail, which means my primary password does not need to be exposed.</p>
+                    <div class="query-box">
+                        <div class="question" id="2">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="heading">Enable 3rd Party App Access to Yahoo! Mail</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="answer ans-2">
+                            <ol>
+                                <li>First, you can login with your user name, then click Next.</li>
+                                <li>Go to the upper right corner of the page, and you will find your user name. It is a clickable field.
+                                    <img src="assets/images/faq-image/yahoo1.png" alt="Yahoo1">
+                                </li>
+                                <li>In the dropdown, one link is called &quot;Account Info&quot;. Click to access it.</li>
+                                <li>After clicking it, you will be asked to log in again to see the &quot;Account Security&quot; page. Once logged in, you will see the following page
+                                    <img src="assets/images/faq-image/yahoo2.png" alt="">
+                                </li>
+                                <li>At the very bottom, you will see the &quot;Manage app passwords&quot;. Click it.
+                                    <img src="assets/images/faq-image/yahoo3.png" alt="">
+                                </li>
+                                <li>Enter a meaningful name and click &quot;Generate&quot;. This will generate a pass code and associate with a name. Like this:
+                                    <img src="assets/images/faq-image/yahoo4.png" alt="">
+                                </li>
+                                <li>Once you get the passcode, you must write it down somewhere that you can access later, because if you click &quot;Done&quot;, you are never going to see this passcode again. Don&#39;t lose it.
+                                    <img src="assets/images/faq-image/yahoo5.png" alt="">
+                                </li>
+                                <li>Once you saved the passcode, click &quot;Done&quot;, you will be all set.</li>
+                                <li>Use this passcode to configure in Sender password to configure.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </section>
+
+    <script>
+        $(document).ready(function(){
+            $(".question").click(function(){
+                var id = $(this).attr("id");
+                $(".ans-"+id).slideToggle();
+            });
+        });
+    </script>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-brand">
+                        <img src="assets/images/Logo.png" alt="">
+                        <span class="copyright">&copy; Automagic Pvt. Ltd. All rights reserved.</span>
+                        <div class="social-media">
+                            <a href="https://www.facebook.com/Utsavfoundation" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://twitter.com/utsav_yoga" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/utsavyoga/"  target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UC4vC_aFLuhHQgcMv1mBrKQw?view_as=subscriber" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/showcase/70394467/admin/" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <h4 class="footer-col-title">Useful Links</h4>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="links">
+                                <a class="link" href="#"> Option1</a>
+                                <a class="link" href="#"> Option1</a>
+                                <a class="link" href="#"> Option1</a>
+                                <a class="link" href="#"> Option1</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <h4 class="footer-col-title">Subscribe to our Newsletter</h4>
+                    <p>Join our mailing list for exclusive programs, offers, and discounts. We promise to only send you good things.</p>
+                    <div class="subscribe-box">
+                        <input type="email" placeholder="Email Address">
+                        <input type="submit" value="Subscribe">
+                    </div>
+                    <small class="subscribe-box-validation lbl-error"></small>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="add-links">
+        <div class="container">
+            <a class="link" href="contactus.html">Contact Us</a>
+            <a class="link" href="terms_and_condition.html">Terms & Conditions</a>
+            <a class="link" href="privacy_policy.html">Privacy Policies</a>
+            <a class="link" href="code_of_conducts.html">Code of Conduct</a>
+        </div>
+    </div>
+
+    <!-- <script src="assets/js/main1.js"></script> -->
+    <script src="assets/js/wow.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

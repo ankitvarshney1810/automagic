@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.738" x2="0.211" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7b89f0"/>
+      <stop offset="1" stop-color="#7b87ec"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.579" y1="0.773" x2="0.811" y2="0.881" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4959d8"/>
+      <stop offset="1" stop-color="#7372e8"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient" cx="0.258" cy="0.5" r="0.316" gradientTransform="matrix(1, 0.008, -0.026, 3.437, 0.013, -1.221)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4c58c9"/>
+      <stop offset="1" stop-color="#827aea"/>
+    </radialGradient>
+    <clipPath id="clip-Web_1920_2">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_2" data-name="Web 1920 – 2" clip-path="url(#clip-Web_1920_2)">
+    <rect width="1920" height="1080" fill="url(#linear-gradient)"/>
+    <circle id="Ellipse_147" data-name="Ellipse 147" cx="497.5" cy="497.5" r="497.5" transform="translate(-565 -761)" fill="url(#linear-gradient-2)"/>
+    <path id="Polygon_1" data-name="Polygon 1" d="M1981.514,137.913a395,395,0,0,1,427.97,0l853.482,550.069C3594.135,901.421,3442.972,1415,3048.981,1415H1342.018c-393.991,0-545.154-513.579-213.985-727.018Z" transform="translate(-528)" fill="url(#radial-gradient)"/>
+    <g id="Group_4069" data-name="Group 4069">
+      <circle id="Ellipse_148" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1536 30)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-2" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1573 30)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-3" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1610 30)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-4" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1647 30)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-5" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1684 30)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-6" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1721 30)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-7" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1758 30)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-8" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1795 30)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-9" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1832 30)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-10" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1869 30)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-11" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1536 67)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-12" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1573 67)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-13" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1610 67)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-14" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1647 67)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-15" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1684 67)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-16" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1721 67)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-17" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1758 67)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-18" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1795 67)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-19" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1832 67)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-20" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1869 67)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-21" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1536 104)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-22" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1573 104)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-23" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1610 104)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-24" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1647 104)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-25" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1684 104)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-26" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1721 104)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-27" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1758 104)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-28" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1795 104)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-29" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1832 104)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-30" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1869 104)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-31" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1536 141)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-32" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1573 141)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-33" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1610 141)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-34" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1647 141)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-35" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1684 141)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-36" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1721 141)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-37" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1758 141)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-38" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1795 141)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-39" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1832 141)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-40" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1869 141)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-41" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1536 178)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-42" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1573 178)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-43" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1610 178)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-44" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1647 178)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-45" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1684 178)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-46" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1721 178)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-47" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1758 178)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-48" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1795 178)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-49" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1832 178)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-50" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1869 178)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-51" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1536 215)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-52" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1573 215)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-53" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1610 215)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-54" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1647 215)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-55" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1684 215)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-56" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1721 215)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-57" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1758 215)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-58" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1795 215)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-59" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1832 215)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-60" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1869 215)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-61" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1536 252)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-62" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1573 252)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-63" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1610 252)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-64" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1647 252)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-65" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1684 252)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-66" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1721 252)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-67" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1758 252)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-68" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1795 252)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-69" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1832 252)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-70" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1869 252)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-71" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1536 289)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-72" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1573 289)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-73" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1610 289)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-74" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1647 289)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-75" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1684 289)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-76" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1721 289)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-77" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1758 289)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-78" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1795 289)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-79" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1832 289)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-80" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1869 289)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-81" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1536 326)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-82" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1573 326)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-83" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1610 326)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-84" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1647 326)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-85" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1684 326)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-86" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1721 326)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-87" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1758 326)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-88" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1795 326)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-89" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1832 326)" fill="#4959d8" opacity="0.3"/>
+      <circle id="Ellipse_148-90" data-name="Ellipse 148" cx="10.5" cy="10.5" r="10.5" transform="translate(1869 326)" fill="#4959d8" opacity="0.3"/>
+    </g>
+  </g>
+</svg>

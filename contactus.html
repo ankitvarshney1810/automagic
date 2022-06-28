@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#21395f">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <script src="https://kit.fontawesome.com/4e1eba2436.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/29.2.0/classic/ckeditor.js"></script>
+    <link rel="icon" href="assets/images/icon.png" type="image">
+</head>
+<body>
+    <header class="scroll-header">
+        <a href="" class="site-name"><img src="assets/images/Logo.png" alt="" class="light-logo"><img src="assets/images/Logo-light.png" alt="" class="dark-logo"></a>
+        <nav>
+            <a href="index.html" class="link active">Home<span class="line"></span></a>
+            <a href="index.html" class="link">About<span class="line"></span></a>
+            <a href="index.html" class="link">Contact<span class="line"></span></a>
+            <a href="index.html" class="link">Campaign<span class="line"></span></a>
+        </nav>
+        <div class="btnm">
+            <div class="btnmenu">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="about-heading">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <span>Contact Us</span>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <section id="mainPage">
+        <div class="container">
+            <div class="row justify-content-between">
+    
+                <div class="col-sm-12 col-md-12 col-lg-7">
+                    <h2 class="title">Get in Touch <br> <small> if you have any questions about your account, need help finding sessions, or to give us feedback</small> </h2>
+                    <p>You can also check our <a href="<?=WEB_URL.'faq.php'?>">Frequently Asked Questions</a> .</p>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-6 mt-3">
+                            <h4 class="mb-3">Head Office</h4>
+                            <p>Utsav, Plot No. 100, DLF Phase 5, Sector 43, Gurugram, Haryana 122002</p>
+                            <p class="m-0"><span><i class="fa fa-envelope-open-text"></i> </span> &nbsp;&nbsp;<a href="mailto:info@utsav.yoga">info@utsav.yoga</a> </p>
+                            <p class="m-0"><span><i class="fa fa-mobile-alt"></i> </span> &nbsp;&nbsp;<a href="tel:+919315816373">919315816373</a> </p>
+                            <p class="m-0"><span><i class="fa fa-phone-volume"></i> </span> &nbsp;&nbsp;<a href="tel:+911246641851">0124 6641851</a> </p>
+                            <p><span><i class="fab fa-whatsapp"></i> </span> &nbsp;&nbsp;<a href="https://wa.me/919315816363" target="_blank">919315816363</a> </p>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-6 mt-3 mb-3">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14030.30860235598!2d77.08222561857677!3d28.46216051791738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d195191c63ead%3A0x32bd0f27754d4179!2sUTSAV!5e0!3m2!1sen!2sin!4v1612162910259!5m2!1sen!2sin"
+                                width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-5">
+    
+                    <div class="lead-form">
+                        <form action="javascript:void(0)" id="contactus-form">
+                        <div class="form-input">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="input-text" placeholder="Enter here" required>
+                        </div>
+                        <div class="form-input">
+                            <label for="mobile">Mobile Number</label>
+                            <input type="number" id="mobile" class="input-text" placeholder="Enter here" required maxlength = "10">
+                        </div>
+                        <div class="form-input">
+                            <label for="email">Email Id</label>
+                            <input type="email" id="email" class="input-text" placeholder="Enter here">
+                        </div>
+                        <div class="form-input">
+                            <label for="msg">Message</label>
+                            <textarea placeholder="Enter your message here." id="msg" rows="4" class="input-text"></textarea>
+                        </div>
+                        <span class="error-message" role="alert"></span>
+                        <input type="submit" value="Submit" class="form-cta" id="contact-us">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-brand">
+                        <img src="assets/images/Logo.png" alt="">
+                        <span class="copyright">&copy; Automagic Pvt. Ltd. All rights reserved.</span>
+                        <div class="social-media">
+                            <a href="https://www.facebook.com/Utsavfoundation" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://twitter.com/utsav_yoga" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/utsavyoga/"  target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UC4vC_aFLuhHQgcMv1mBrKQw?view_as=subscriber" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/showcase/70394467/admin/" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <h4 class="footer-col-title">Useful Links</h4>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="links">
+                                <a class="link" href="#"> Option1</a>
+                                <a class="link" href="#"> Option1</a>
+                                <a class="link" href="#"> Option1</a>
+                                <a class="link" href="#"> Option1</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <h4 class="footer-col-title">Subscribe to our Newsletter</h4>
+                    <p>Join our mailing list for exclusive programs, offers, and discounts. We promise to only send you good things.</p>
+                    <div class="subscribe-box">
+                        <input type="email" placeholder="Email Address">
+                        <input type="submit" value="Subscribe">
+                    </div>
+                    <small class="subscribe-box-validation lbl-error"></small>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="add-links">
+        <div class="container">
+            <a class="link" href="contactus.html">Contact Us</a>
+            <a class="link" href="terms_and_condition.html">Terms & Conditions</a>
+            <a class="link" href="privacy_policy.html">Privacy Policies</a>
+            <a class="link" href="code_of_conducts.html">Code of Conduct</a>
+        </div>
+    </div>
+
+    <!-- <script src="assets/js/main1.js"></script> -->
+    <script src="assets/js/wow.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

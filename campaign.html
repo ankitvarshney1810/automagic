@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#21395f">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://kit.fontawesome.com/4e1eba2436.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/29.2.0/classic/ckeditor.js"></script>
+    <link rel="icon" href="assets/images/icon.png" type="image">
+</head>
+<body>
+    <section class="sidebar" id="sidebar">
+        <div class="head">
+            <div class="logo">
+                <img src="assets/images/Logo.png" alt="">
+            </div>
+        </div>
+        <div class="body">
+            <a href="dashboard.html">
+                <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                <span class="name">DASHBOARD</span>
+            </a>
+            <h6>MAIN MENU</h6>
+            <div class="drop active">
+                <a href="#">
+                    <span class="icon"><i class="fas fa-book-open"></i></span>
+                    <span class="name">Campaign</span>
+                </a>
+                <span class="add-cat" id="campaign"><i class="fas fa-chevron-circle-down"></i></span>
+                <div class="dropdown campaign" style="display: none;">
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-plus"></i></span>
+                        <span class="name">Create Campaign</span>
+                    </a>
+                </div>
+            </div>
+            <div class="drop">
+                <a href="contact.html">
+                    <span class="icon"><i class="fas fa-users"></i></span>
+                    <span class="name">Contacts</span>
+                </a>
+                <span class="add-cat" id="category"><i class="fas fa-chevron-circle-down"></i></span>
+                <div class="dropdown category" style="display: none;">
+                    <a href="contact.html">
+                        <span class="icon"><i class="fas fa-layer-group"></i></span>
+                        <span class="name">Categories</span>
+                    </a>
+                </div>
+            </div>
+            <script>
+                $(document).ready(function(){
+                    $(".add-cat").click(function(){
+                        var id = $(this).attr("id");
+                        $("."+id).toggle();
+                    });
+                });
+            </script>
+            <a href="#">
+                <span class="icon"><i class="fas fa-user"></i></span>
+                <span class="name">Sender</span>
+            </a>
+            <a href="#">
+                <span class="icon"><i class="fas fa-sliders-h"></i></span>
+                <span class="name">Settings</span>
+            </a>
+        </div>
+    </section>
+    <header>
+        <div class="head">
+            <div class="btnmenu">
+                <div class="bars top"></div>
+                <div class="bars center"></div>
+                <div class="bars bottom"></div>
+            </div>
+            <div class="notify">
+                <span class="icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="count">45</span>
+                </span>
+                <span class="icon">
+                    <i class="fas fa-comments"></i>
+                    <span class="count">17</span>
+                </span>
+            </div>
+            <div class="sub-admin">
+                <div class="pic">
+                    <img src="assets/images/pic.jpg" alt="Faculty">
+                </div>
+                <div class="title">
+                    <strong>Ankit Varshney</strong>
+                    <small>User</small>
+                </div>
+                <i class="fas fa-caret-down"></i>
+                <div class="dropdown">
+                    <a href="#" class="item">Profile</a>
+                    <a href="" class="item">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="content" id="content">
+        <div class="campaign">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-12 col-md-3">
+                        <div class="heading">Campaign</div>
+                    </div>
+                    <div class="col-12 col-md-9 text-end mt-sm-2">
+                        <div class="row g-0 justify-content-md-end">    
+                            <div class="col-12 col-sm-auto">
+                                <!-- <button class="btn btn-apply" id="import-contact"><i class="fas fa-file-upload me-sm-1"></i><span class="d-none d-sm-inline-block">Import Contacts</span></button> -->
+                                <button class="btn btn-apply" id="add-contact"><i class="fas fa-plus me-sm-1"></i><span class="d-none d-sm-inline-block">Create New Campaign</span></button>
+                                <button class="btn btn-success"><i class="fa fa-refresh"></i></button>
+                                <button class="btn btn-light btn-option"><i class="fas fa-bars"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="#">All (0)</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Scheduled (0)</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Processing (0)</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Completed (0)</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Draft (0)</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Cancelled (0)</a>
+                            </li>
+                          </ul>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <div class="table-responsive-lg">
+                            <table class="table table-bordered">
+                                <thead class="table-dark">
+                                  <tr>
+                                    <th scope="col">Campaigns <i class="fas fa-sort ms-2"></i></th>
+                                    <th scope="col">Recipients <i class="fas fa-sort ms-2"></i></th>
+                                    <th scope="col">Sent <i class="fas fa-sort ms-2"></i></th>
+                                    <th scope="col">Open <i class="fas fa-sort ms-2"></i></th>
+                                    <th scope="col">Click <i class="fas fa-sort ms-2"></i></th>
+                                    <th scope="col">Unsubscribe <i class="fas fa-sort ms-2"></i> </th>
+                                    <th scope="col" class="text-center">Action</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                      <td>XYZ</td>
+                                      <td>256</td>
+                                      <td>233</td>
+                                      <td>111</td>
+                                      <td>98</td>
+                                      <td>12</td>
+                                      <td class="d-flex">
+                                        <a href="#" class="btn btn-secondary st-0 m-auto"><i class="fas fa-pen"></i></a>
+                                      </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="empty-tag">
+                            <img src="assets/images/nodata.gif" alt="">
+                        </div>
+                    </div>
+                </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link">Previous</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <div class="model success-model">
+        <div class="new">
+            <div class="row">
+                <div class="col mb-2 text-center">
+                    <img src="assets/images/success.gif" alt="">
+                    <h3>Success!</h3>
+                    <p>Message that you want..</p>
+                    <button class="btn solid-action-btn">Continue</button>
+                </div>
+            </div>
+            <div class="close">
+                <img src="assets/images/close.svg">
+            </div>
+        </div>
+    </div>
+    <div class="model failed-model">
+        <div class="new">
+            <div class="row">
+                <div class="col mb-2 text-center">
+                    <img src="assets/images/failed.gif" alt="">
+                    <h3 class="text-danger">OOOPS!</h3>
+                    <p>Message that you want..</p>
+                    <button class="btn btn-danger rounded-pill ps-4 pe-4">Try Again</button>
+                </div>
+            </div>
+            <div class="close">
+                <img src="assets/images/close.svg">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-md-7 text-center text-md-start align-self-center">
+                    <span class="copyright">© 2022 Automagic. All Rights Reserved</span>
+                </div>
+                <div class="col-md-5 d-grid d-md-block align-self-center">
+                    <div class="footer-social-list">
+                        <ul class="list-inline top-margin-20">
+                            <li>
+                                <a href="" target="blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="blank">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="blank">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="blank">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="blank">
+                                    <i class="fab fa-pinterest-p"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

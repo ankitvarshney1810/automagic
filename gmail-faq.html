@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#21395f">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <script src="https://kit.fontawesome.com/4e1eba2436.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/29.2.0/classic/ckeditor.js"></script>
+    <link rel="icon" href="assets/images/icon.png" type="image">
+</head>
+<body>
+    <header class="scroll-header">
+        <a href="" class="site-name"><img src="assets/images/Logo.png" alt="" class="light-logo"><img src="assets/images/Logo-light.png" alt="" class="dark-logo"></a>
+        <nav>
+            <a href="index.html" class="link active">Home<span class="line"></span></a>
+            <a href="index.html" class="link">About<span class="line"></span></a>
+            <a href="index.html" class="link">Contact<span class="line"></span></a>
+            <a href="index.html" class="link">Campaign<span class="line"></span></a>
+        </nav>
+        <div class="btnm">
+            <div class="btnmenu">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="about-heading">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <span>Gmail Password Setup</span>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <section class="setup-faq">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="query-box">
+                        <div class="question" id="1">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="heading">Step 1</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="answer ans-1">
+                            <p>Check if username (your gmail id) and password are correct and you are able to login on <a href="http://www.google.com/gmail/" target="_blank" rel="noopener noreferrer">https://www.google.com/gmail/</a></p>
+                        </div>
+                    </div>
+                    <div class="query-box">
+                        <div class="question" id="2">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="heading">Step 2</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="answer ans-2">
+                            <p>If Step 1 is okay, then try to open <strong>Less secure app access</strong> setting and turn this to OFF</p>
+                            <ol>
+                                <li><a href="https://myaccount.google.com/lesssecureapps" target="_blank" rel="noopener noreferrer">https://myaccount.google.com/lesssecureapps</a> (In case your email is personal account)
+                                    <img src="assets/images/faq-image/gmail1.png" alt="">
+                                </li>
+                                <li>If your email is created by Google Admin (Gsuite), then you need to contact your Administrator and ask then to turn this setting to OFF for your account
+                                    <ol type="a">
+                                        <li>&lt;a href=https://admin.google.com/&gt;Sign in&lt;/a&gt; to your Google Admin console</li>
+                                        <li>From the Admin console Home page, go to Security &gt; Less secure apps.</li>
+                                        <li>To apply the setting to everyone, leave the top organizational unit selected. Otherwise, select a child organizational unit or a configuration group</li>
+                                        <li>Select the setting for less secure apps:
+                                            <ol type="i">
+                                                <li>Allow users to manage their access to less secure apps. Users can turn on or turn off access to less secure apps.</li>
+                                            </ol>
+                                        </li>
+                                        <li>Click Save.</li>
+                                    </ol>
+                                    <img src="assets/images/faq-image/gmail2.png" alt="">
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="query-box">
+                        <div class="question" id="4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="heading">References</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="answer ans-4">
+                            <p><a href="https://support.google.com/accounts/answer/6010255?hl=en#zippy=%2Cif-less-secure-app-access-is-on-for-your-account%2Cif-less-secure-app-access-is-off-for-your-account" target="_blank" rel="noopener noreferrer">https://support.google.com/accounts/answer/6010255?hl=en#zippy=%2Cif-less-secure-app-access-is-on-for-your-account%2Cif-less-secure-app-access-is-off-for-your-account</a></p>
+                            <p><a href="https://support.google.com/a/answer/6260879?hl=en" target="_blank" rel="noopener noreferrer">https://support.google.com/a/answer/6260879?hl=en</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </section>
+
+    <script>
+        $(document).ready(function(){
+            $(".question").click(function(){
+                var id = $(this).attr("id");
+                $(".ans-"+id).slideToggle();
+            });
+        });
+    </script>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-brand">
+                        <img src="assets/images/Logo.png" alt="">
+                        <span class="copyright">&copy; Automagic Pvt. Ltd. All rights reserved.</span>
+                        <div class="social-media">
+                            <a href="https://www.facebook.com/Utsavfoundation" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://twitter.com/utsav_yoga" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/utsavyoga/"  target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UC4vC_aFLuhHQgcMv1mBrKQw?view_as=subscriber" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/showcase/70394467/admin/" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <h4 class="footer-col-title">Useful Links</h4>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="links">
+                                <a class="link" href="#"> Option1</a>
+                                <a class="link" href="#"> Option1</a>
+                                <a class="link" href="#"> Option1</a>
+                                <a class="link" href="#"> Option1</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <h4 class="footer-col-title">Subscribe to our Newsletter</h4>
+                    <p>Join our mailing list for exclusive programs, offers, and discounts. We promise to only send you good things.</p>
+                    <div class="subscribe-box">
+                        <input type="email" placeholder="Email Address">
+                        <input type="submit" value="Subscribe">
+                    </div>
+                    <small class="subscribe-box-validation lbl-error"></small>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="add-links">
+        <div class="container">
+            <a class="link" href="contactus.html">Contact Us</a>
+            <a class="link" href="terms_and_condition.html">Terms & Conditions</a>
+            <a class="link" href="privacy_policy.html">Privacy Policies</a>
+            <a class="link" href="code_of_conducts.html">Code of Conduct</a>
+        </div>
+    </div>
+
+    <!-- <script src="assets/js/main1.js"></script> -->
+    <script src="assets/js/wow.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

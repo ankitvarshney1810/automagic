@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#21395f">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="node_modules/jquery-ui/jquery-ui.css"> -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://kit.fontawesome.com/4e1eba2436.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/29.2.0/classic/ckeditor.js"></script>
+    <script src="assets/js/the-datepicker.js"></script>
+    <link rel="icon" href="assets/images/icon.png" type="image">
+</head>
+<body>
+    <section class="sidebar" id="sidebar">
+        <div class="head">
+            <div class="logo">
+                <img src="assets/images/Logo.png" alt="">
+            </div>
+        </div>
+        <div class="body">
+            <a href="dashboard.html">
+                <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                <span class="name">DASHBOARD</span>
+            </a>
+            <h6>MAIN MENU</h6>
+            <div class="drop active">
+                <a href="#">
+                    <span class="icon"><i class="fas fa-book-open"></i></span>
+                    <span class="name">Campaign</span>
+                </a>
+                <span class="add-cat" id="campaign"><i class="fas fa-chevron-circle-down"></i></span>
+                <div class="dropdown campaign" style="display: none;">
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-plus"></i></span>
+                        <span class="name">Create Campaign</span>
+                    </a>
+                </div>
+            </div>
+            <div class="drop">
+                <a href="contact.html">
+                    <span class="icon"><i class="fas fa-users"></i></span>
+                    <span class="name">Contacts</span>
+                </a>
+                <span class="add-cat" id="category"><i class="fas fa-chevron-circle-down"></i></span>
+                <div class="dropdown category" style="display: none;">
+                    <a href="contact.html">
+                        <span class="icon"><i class="fas fa-layer-group"></i></span>
+                        <span class="name">Categories</span>
+                    </a>
+                </div>
+            </div>
+            <script>
+                $(document).ready(function(){
+                    $(".add-cat").click(function(){
+                        var id = $(this).attr("id");
+                        $("."+id).toggle();
+                    });
+                });
+            </script>
+            <a href="#">
+                <span class="icon"><i class="fas fa-user"></i></span>
+                <span class="name">Sender</span>
+            </a>
+            <a href="#">
+                <span class="icon"><i class="fas fa-sliders-h"></i></span>
+                <span class="name">Settings</span>
+            </a>
+        </div>
+    </section>
+    <header>
+        <div class="head">
+            <div class="btnmenu">
+                <div class="bars top"></div>
+                <div class="bars center"></div>
+                <div class="bars bottom"></div>
+            </div>
+            <div class="notify">
+                <span class="icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="count">45</span>
+                </span>
+                <span class="icon">
+                    <i class="fas fa-comments"></i>
+                    <span class="count">17</span>
+                </span>
+            </div>
+            <div class="sub-admin">
+                <div class="pic">
+                    <img src="assets/images/pic.jpg" alt="Faculty">
+                </div>
+                <div class="title">
+                    <strong>Ankit Varshney</strong>
+                    <small>User</small>
+                </div>
+                <i class="fas fa-caret-down"></i>
+                <div class="dropdown">
+                    <a href="#" class="item">Profile</a>
+                    <a href="" class="item">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="content" id="content">
+        <div class="campaign">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-12 col-md-3">
+                        <div class="heading">Add Campaign</div>
+                    </div>
+                    <!-- <div class="col-12 col-md-8 text-end mt-sm-2">
+                        <div class="row g-0 justify-content-md-end">    
+                            <div class="col-12 col-sm-auto">
+                                <button class="btn btn-apply" id="import-contact"><i class="fas fa-file-upload me-sm-1"></i><span class="d-none d-sm-inline-block">Import Contacts</span></button>
+                                <button class="btn btn-apply" id="add-contact"><i class="fas fa-plus me-sm-1"></i><span class="d-none d-sm-inline-block">Create New Campaign</span></button>
+                                <button class="btn btn-success"><i class="fa fa-refresh"></i></button>
+                                <button class="btn btn-light btn-option"><i class="fas fa-bars"></i></button>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="progress-bar">
+                    <div class="row mt-3">
+                        <div class="col text-center">
+                            <span id="opt_1" class="level level-active">Set Up</span>
+                            <span id="line_1" class="line"></span>
+                            <span id="opt_2" class="level">Template</span>
+                            <span id="line_2" class="line"></span>
+                            <span id="opt_3" class="level">Recipient</span>
+                            <span id="line_3" class="line"></span>
+                            <span id="opt_3" class="level">Preview</span>
+                            <span id="line_3" class="line"></span>
+                            <span id="opt_4" class="level">Submission</span>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row mb-4 d-none" id="set-up">
+                    <div class="col">
+                        <form action="" method="post" class="campaign-form">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label for="campaign-title" class="form-label">Campaign Title:</label>
+                                        <input type="text" class="form-control" id="campaign-title" aria-describedby="campaign-title-Help">
+                                        <div id="campaign-title-Help" class="form-text">Give your campaign a title to help organize and locate it easily within your account.</div>
+                                    </div>  
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label for="mail-subject" class="form-label">Mail Subject:</label>
+                                        <input type="text" class="form-control" id="mail-subject" aria-describedby="mail-subject-Help">
+                                        <div id="mail-subject-Help" class="form-text">Write a subject line that clearly describes your email content.</div>
+                                    </div>  
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label for="from-email" class="form-label">From Email Id:</label>
+                                        <input type="text" class="form-control" id="from-email" aria-describedby="from-email-Help">
+                                        <div id="from-email-Help" class="form-text">Choose the email address to send your campaign or Add a new email.</div>
+                                    </div>  
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label for="from-name" class="form-label">From Name:</label>
+                                        <input type="text" class="form-control" id="from-name" aria-describedby="from-name-Help">
+                                        <div id="from-name-Help" class="form-text">Enter a name (e.g. your company name) to help campaign recipients recognize you in their inbox. Else default will be used from Sender Email Id.</div>
+                                    </div>  
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label for="attachment" class="form-label">Attachment:</label>
+                                        <input class="form-control" type="file" id="attachment" aria-describedby="attachment-Help">
+                                        <div id="attachment-Help" class="form-text">Choose a file to attach to your email (4MB maximum). File should not be executable.</div>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="row g-0">
+                                <div class="col-12 text-end mt-sm-2">
+                                    <div class="row g-0 justify-content-md-end">    
+                                        <div class="col-12 col-sm-auto">
+                                            <button class="btn btn-success"><span class="d-inline-block">Save & Quit</span></button>
+                                            <button class="btn btn-apply"><span class="d-inline-block me-1">Next</span><i class="fas fa-angle-right"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mb-4" id="template">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item">
+                                      <a class="nav-link template-nav active" aria-current="page" id="create">New HTML Template</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link template-nav" id="recent">Recent Message Template</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link template-nav" id="my">My Template</a>
+                                    </li>
+                                  </ul>
+                            </div>
+                        </div>
+                        <form action="" method="post" class="campaign-form mt-3" id="create-template">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="mb-3">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="exampleFormControlTextarea1" class="form-label">Paste HTML here:</label>
+                                            </div>
+                                            <div class="col-6 text-end">
+                                                <div class="d-inline-block">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                                        <label class="form-check-label" for="flexSwitchCheckChecked">Save Template for Future</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <textarea class="form-control fs-6" id="exampleFormControlTextarea1" rows="8" placeholder="Paste HTML here:"></textarea>
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <div id="attachment-Help" class="form-text">Use {{#var}} where you want to put variables in template.</div>
+                                            </div>
+                                            <div class="col-4 text-end">
+                                                <a href="" class="add_variable"><i class="fas fa-plus me-sm-1"></i>Add Variable</a>
+                                            </div>
+                                        </div>
+                                        
+                                      </div> 
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="variable-form mb-3">
+                                        <table class="table table-borderless">
+                                            <thead>
+                                              <tr>
+                                                <th scope="col">S.No.</th>
+                                                <th scope="col">Variable</th>
+                                                <th scope="col">Fallback Value</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <th scope="row">1</th>
+                                                <td>
+                                                    <div class="mb-1">
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option value="-1">Choose Variable</option>
+                                                            <option value="firstName">First Name</option>
+                                                            <option value="lastName">Last Name</option>
+                                                            <option value="emailId">Email</option>
+                                                            <option value="phone">Phone</option>
+                                                            <option value="other">Other</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="mb-1">
+                                                        <input type="text" class="form-control" id="fallback-value" placeholder="Fallback Value">
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">2</th>
+                                                <td>
+                                                    <div class="mb-1">
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option value="-1">Choose Variable</option>
+                                                            <option value="firstName">First Name</option>
+                                                            <option value="lastName">Last Name</option>
+                                                            <option value="emailId">Email</option>
+                                                            <option value="phone">Phone</option>
+                                                            <option value="other">Other</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="mb-1">
+                                                        <input type="text" class="form-control" id="fallback-value" placeholder="Fallback Value">
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-0">
+                                <div class="col-12 text-end mt-sm-2">
+                                    <div class="row g-0 justify-content-md-end">    
+                                        <div class="col-12 col-sm-auto">
+                                            <button class="btn btn-secondary"><i class="fas fa-angle-left"></i><span class="d-inline-block ms-1">Previous</span></button>
+                                            <button class="btn btn-success"><span class="d-inline-block">Save & Quit</span></button>
+                                            <button class="btn btn-apply"><span class="d-inline-block me-1">Next</span><i class="fas fa-angle-right"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="recent-template mt-3" id="recent-template">
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="card">
+
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="card">
+
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="card">
+
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="card">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-template mt-3" id="my-template">
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="card">
+
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="card">
+
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="card">
+
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="card">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4 d-none" id="recipient">
+                    <div class="col">
+                        <form action="" class="">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label for="number" class="mb-2">Select Categories:</label>
+                                    </div>
+                                    <div class="col-6 text-end">
+                                        <a href="" class="add_category"><i class="fas fa-plus me-sm-1"></i>Add Category</a>
+                                    </div>
+                                </div>
+                                <ul class="category mb-2">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-md-4">
+                                            <li>
+                                                <input type="checkbox" name="category" class="send-check" id="t1" value="" checked>
+                                                <label for="t1">Kuch bhi ho sakti hai <div class="contacts">(24 Contacts)</div></label>
+                                            </li>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4">
+                                            <li>
+                                                <input type="checkbox" name="category" class="send-check" id="t2" value="">
+                                                <label for="t2">Kuch bhi <div class="contacts">(24 Contacts)</div></label>
+                                            </li>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4">
+                                            <li>
+                                                <input type="checkbox" name="category" class="send-check" id="t3" value="" checked>
+                                                <label for="t3">Kuch to hogi hi <div class="contacts">(24 Contacts)</div></label>
+                                            </li>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4">
+                                            <li>
+                                                <input type="checkbox" name="category" class="send-check" id="t4" value="">
+                                                <label for="t4">Kuch bhi man lo <div class="contacts">(24 Contacts)</div></label>
+                                            </li>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4">
+                                            <li>
+                                                <input type="checkbox" name="category" class="send-check" id="t5" value="">
+                                                <label for="t5">Kuch bhi ho sakti hai <div class="contacts">(24 Contacts)</div></label>
+                                            </li>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4">
+                                            <li>
+                                                <input type="checkbox" name="category" class="send-check" id="t7" value="">
+                                                <label for="t7">Kuch bhi ho sakti hai <div class="contacts">(24 Contacts)</div></label>
+                                            </li>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4">
+                                            <li>
+                                                <input type="checkbox" name="category" class="send-check" id="t6" value="">
+                                                <label for="t6">Kuch bhi ho sakti hai <div class="contacts">(24 Contacts)</div></label>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </ul>
+                                <div class="row">
+                                    <div class="col">
+                                        <div>Total No. of Contacts Selected: <span class="secondary-color fw-bold">48</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-0">
+                                <div class="col-12 text-end mt-sm-2">
+                                    <div class="row g-0 justify-content-md-end">    
+                                        <div class="col-12 col-sm-auto">
+                                            <button class="btn btn-secondary"><i class="fas fa-angle-left"></i><span class="d-inline-block ms-1">Previous</span></button>
+                                            <button class="btn btn-success"><span class="d-inline-block">Save & Quit</span></button>
+                                            <button class="btn btn-apply"><span class="d-inline-block me-1">Next</span><i class="fas fa-angle-right"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mb-4 d-none" id="preview">
+                    <div class="col">
+                        <div class="mail-preview mb-3">
+                            <div class="head">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="mail-detail">
+                                            <div class="title mb-2">
+                                                <strong>Campaign Title:</strong>
+                                                <span>XYZ</span>
+                                            </div>
+                                            <div class="mb-2">
+                                                <strong>Mail Subject:</strong>
+                                                <span>Kuch bhi jo apko acha lage</span>
+                                            </div>
+                                            <div class="mb-2">
+                                                <strong>From Email:</strong>
+                                                <span>ankit.v@perceptknorigin.com</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="screen-size">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <div class="heading">Mail Body Preview</div>
+                                    </div>
+                                    <div class="col-3 text-end">
+                                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                            <input type="radio" class="btn-check" name="btnradio" id="destop-view" autocomplete="off" checked>
+                                            <label class="btn btn-outline-primary" for="destop-view"><i class="fas fa-desktop"></i></label>
+                                          
+                                            <input type="radio" class="btn-check" name="btnradio" id="mobile-view" autocomplete="off">
+                                            <label class="btn btn-outline-primary" for="mobile-view"><i class="fas fa-mobile-alt"></i></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <div class="email-body" id="email-body">
+                                    <!DOCTYPE html>
+                                    <html lang="en">
+
+                                    <head>
+                                        <meta charset="UTF-8">
+                                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                        <title>Email Template</title>
+                                    </head>
+
+                                    <body>
+                                        <div style="background-color: #FFF6FE; padding: 3rem 0; font-family: sans-serif; ">
+                                            <div style="min-width: 320px; max-width: 640px; background-color:#f9f9f9 ; margin: auto; box-shadow: 0 0 16px rgba(0,0,0,.1); border-radius: 16px; overflow: hidden;">
+                                                <!--Mail Body-->
+                                                <div style="background-color: #ffffff; padding: 40px;">
+                                                    <a href="https://www.utsavyoga.com" target="_blank"><img style="display: block; height: 48px; margin:0  auto 2rem; " src="https://demo.utsav.yoga/assets/img/app_logo.png" alt="Utsav"></a>
+                                                    <!-- <span style="display: block; text-align: center; font-size: 2rem; margin-bottom: 2rem; font-weight: bold; color:#4B1346 ;">Thanks</span> -->
+                                                    <p style="border-bottom: thin solid #eee; margin-bottom: 2rem;"></p>
+                                                    <p style="font-family: Segoe UI; font-size:17px;">Hey {user},</p>
+                                                    <p style="font-family: Segoe UI; font-size:17px;line-height: 24px;">Congratulations on signing up on Utsav Yoga, a important step to <span style="font-weight: bold; color: #4B1346;">'Finding your Bliss'</span> , My name is Viraj Malik and I am founder of Utsav Foundation,  A registered Non profit Organisation.</p>
+                                                    <p style="font-family: Segoe UI; font-size:16px;line-height: 24px;">Our mission is to share authentic yogic knowledge with the World and build a community of Utsav Yogis who don't just live life but celebrate life.</p>
+                                                    <p style="font-family: Segoe UI; font-size:16px;line-height: 24px;">Here is what you can do on Utsav Yoga platform,</p>
+                                                    <a href="https://www.utsavyoga.com/user/" style="display: flex; padding: 16px; margin: 32px 0 16px 0;background-color: #FFD6FB80; border-radius: 10px; text-decoration: none;">
+                                                      <img style="display: block; width: 48px;" src="https://files.utsav.yoga/templates/intromail-1.png" alt="Utsav">
+                                                      <span style="color: #4B1346; margin: auto 16px; line-height: 25px; font-weight: 600; font-size: 16px;">Buy and book our Studio subscription, Check the schedule, Book Classes and Event Passes</span>
+                                                    </a>
+                                                    <a href="https://www.utsavyoga.com/personal-training.php" style="display: flex; padding: 16px; margin: 16px 0 16px 0;background-color: #FFDECF80; border-radius: 10px; text-decoration: none;">
+                                                      <img style="display: block; width: 48px;" src="https://files.utsav.yoga/templates/intromail-2.png" alt="Utsav">
+                                                      <span style="color: #FF4E00; margin: auto 16px; line-height: 25px; font-weight: 600; font-size: 16px;">Buy and book Online Personal Training and Online Group Classes</span>
+                                                    </a>
+                                                    <a href="https://www.utsavyoga.com/user/bq-assessment1.php" style="display: flex; padding: 16px; margin: 16px 0 16px 0;background-color: #FFD6FB80; border-radius: 10px; text-decoration: none;">
+                                                      <img style="display: block; width: 48px;" src="https://files.utsav.yoga/templates/intromail-3.png" alt="Utsav">
+                                                      <span style="color: #4B1346; margin: auto 16px; line-height: 25px; font-weight: 600; font-size: 16px;">Take a Bliss Quotient Assessment to check your current level of blissfulness</span>
+                                                    </a>
+                                                    <a href="https://www.utsavyoga.com/user/health-questionnaire.php" style="display: flex; padding: 16px; margin: 16px 0 16px 0;background-color: #FFDECF80; border-radius: 10px; text-decoration: none;">
+                                                      <img style="display: block; width: 48px;" src="https://files.utsav.yoga/templates/intromail-4.png" alt="Utsav">
+                                                      <span style="color: #FF4E00; margin: auto 16px; line-height: 25px; font-weight: 600; font-size: 16px;">Create your Health profile so that our Personal Trainers and therapists can know you better.</span>
+                                                    </a>
+                                                    <a href="https://play.google.com/store/apps/details?id=com.pkonline.soul.utsav" style="display: flex; padding: 16px; margin: 16px 0 16px 0;background-color: #FFD6FB80; border-radius: 10px; text-decoration: none;">
+                                                      <img style="display: block; width: 48px;" src="https://files.utsav.yoga/templates/intromail-5.png" alt="Utsav">
+                                                      <span style="color: #4B1346; margin: auto 16px; line-height: 25px; font-weight: 600; font-size: 16px;">Post Daily inspiration and connect, follow other Yogis through our Mobile App</span>
+                                                    </a>
+                                                    <a href="https://www.utsavyoga.com/user/profile.php" style="display: flex; padding: 16px; margin: 16px 0 32px 0;background-color: #FFDECF80; border-radius: 10px; text-decoration: none;">
+                                                      <img style="display: block; width: 48px;" src="https://files.utsav.yoga/templates/intromail-6.png" alt="Utsav">
+                                                      <span style="color: #FF4E00; margin: auto 16px; line-height: 25px; font-weight: 600; font-size: 16px;">Refer your friends and earn Rewards</span>
+                                                    </a>
+                                                    <p style="font-family: Segoe UI; font-size:16px;line-height: 24px;">Explore how to get engaged with Utsav Seva Foundation by checking out this link Link</p>
+                                                    <p style="font-family: Segoe UI; font-size:16px;line-height: 24px;">If you have any feedback/suggestions for me, you can always drop a line to me</p>
+                                                    <p style="font-family: Segoe UI; font-size:16px;line-height: 24px;">Thanks for your support</p>
+                                                    <p style="font-family: Segoe UI; font-size:16px;line-height: 24px;">Team Utsav!</p>
+                                                </div>
+                                                <!--Mail footer-->
+                                                <div style="padding: 32px; text-align: center;">
+                                                    <div style="text-align: center; margin: auto;">
+                                                        <a style="margin:0 1rem; font-family: sans-serif; text-decoration:none; color:#5D5C5C;font-weight: 600; font-size:14px;" href="https://utsav.yoga/contact-us.php">Help</a>
+                                                        <a style="margin:0 1rem; font-family: sans-serif; text-decoration:none; color:#5D5C5C;font-weight: 600; font-size:14px;" href="https://demo.utsav.yoga/user/">Account</a>
+                                                        <a style="margin:0 1rem; font-family: sans-serif; text-decoration:none; color:#5D5C5C;font-weight: 600; font-size:14px;" href="https://utsav.yoga/CodeOfConduct.php">Code of Conduct</a>
+                                                        <a style="margin:0 1rem; font-family: sans-serif; text-decoration:none; color:#5D5C5C;font-weight: 600; font-size:14px;" href="https://utsav.yoga/faq.php">FAQ</a>
+                                                    </div>
+                                                    <span style="font-size: 14px; line-height: 24px; color: #888; margin-top: 1rem; display: block;">© Utsav Foundation. All Right Reserved. We appreciate you!</span>
+                                                    <div style="text-align: center; margin-top: 1rem;">
+                                                        <a style="margin: 8px; display: inline-block;" target="_blank" href="https://www.facebook.com/Utsavfoundation" title="Facebook"><img src="https://files.utsav.yoga/icons/ic_fb.png" alt="Facebook"></a>
+                                                        <a style="margin: 8px; display: inline-block;" target="_blank" href="https://www.instagram.com/utsavyoga/" title="Instagram"><img src="https://files.utsav.yoga/icons/ic_insta.png" alt="Instagram"></a>
+                                                        <a style="margin: 8px; display: inline-block;" target="_blank" href="https://www.youtube.com/channel/UCm7sKqAbGQEaY0l7XH8VeOQ"><img src="https://files.utsav.yoga/icons/ic_yt.png" alt="Youtube"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </body>
+
+                                    </html>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mail-recepients mb-3">
+                            <dv class="row mb-2">
+                                <div class="col-5">
+                                    <div class="heading">Recipients</div>
+                                </div>
+                                <div class="col-7 text-end">
+                                    <div>Total No. of Recipients Selected: <span class="secondary-color fw-bold">48</span></div>
+                                </div>
+                            </dv>
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-4">
+                                    <div class="card">
+                                        <div class="category-title mb-2">Kuch bhi ho sakti hai</div>
+                                        <div class="contact-count">(24 Contacts)</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4">
+                                    <div class="card">
+                                        <div class="category-title mb-2">Kuch bhi</div>
+                                        <div class="contact-count">(24 Contacts)</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4">
+                                    <div class="card">
+                                        <div class="category-title mb-2">Kuch to hogi hi</div>
+                                        <div class="contact-count">(24 Contacts)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row g-0">
+                            <div class="col-12 text-end mt-sm-2">
+                                <div class="row g-0 justify-content-md-end">    
+                                    <div class="col-12 col-sm-auto">
+                                        <button class="btn btn-secondary"><span class="d-inline-block ms-1">Need Changes</span></button>
+                                        <button class="btn btn-apply"><span class="d-inline-block me-1">Looks Good, Go to Schedule</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4 d-none" id="submission">
+                    <div class="col">
+                        <form action="" class="h-100">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="head mb-1">Heading</div>
+                                    <div class="mb-3">
+                                        <label class="schedule">Schedule Now
+                                            <input type="radio" name="schedule" id="schedule1" autocomplete="off"  checked="checked">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="schedule">Schedule Later
+                                            <input type="radio" name="schedule" id="schedule2" autocomplete="off">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <!-- <div class="btn-group btn-group-sm mb-3" role="group" aria-label="Basic radio toggle button group">
+                                        <input type="radio" class="btn-check" name="schedule" id="schedule1" autocomplete="off" checked>
+                                        <label class="btn btn-outline-primary" for="schedule1">Schedule Now</label>
+ 
+                                        <input type="radio" class="btn-check" name="schedule" id="schedule2" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="schedule2">Schedule Later</label>
+                                    </div> -->
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="mb-5">
+                                                <label for="datepicker" class="form-label">Select Schedule Date</label>
+                                                <input type="text" class="form-control datepicker" id="datepicker" placeholder="dd/mm/yyyy" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="mb-5">
+                                                <label for="timepicker" class="form-label">Select Schedule Time</label>
+                                                <input type="time" class="form-control timepicker" id="timepicker" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="head mb-1">How you want to schedule you campaign?</div>
+                                    <div class="mb-3">
+                                        <label class="schedule">One Time
+                                            <input type="radio" name="recurring" id="recurring1" autocomplete="off" checked="checked">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="schedule">Recurring
+                                            <input type="radio" name="recurring" id="recurring2" autocomplete="off">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <!-- <div class="btn-group btn-group-sm mb-3" role="group" aria-label="Basic radio toggle button group">
+                                        <input type="radio" class="btn-check" name="recurring" id="recurring1" autocomplete="off" checked>
+                                        <label class="btn btn-outline-primary" for="recurring1">One Time</label>
+ 
+                                        <input type="radio" class="btn-check" name="recurring" id="recurring2" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="recurring2">Recurring</label>
+                                    </div> -->
+                                    <div class="mb-5" id="recurrence">
+                                        <div>Select any one</div>
+                                        <ul class="category mb-2">
+                                            <li>
+                                                <input type="radio" name="recurring-option" class="send-check" id="recurring-option-1" value="Daily" checked>
+                                                <label for="recurring-option-1">Daily</label>
+                                            </li>                                                    
+                                            <li>
+                                                <input type="radio" name="recurring-option" class="send-check" id="recurring-option-2" value="Weekly">
+                                                <label for="recurring-option-2">Weekly</label>
+                                            </li>                                                 
+                                            <li>
+                                                <input type="radio" name="recurring-option" class="send-check" id="recurring-option-3" value="Monthly">
+                                                <label for="recurring-option-3">Monthly</label>
+                                            </li>                                              
+                                            <li>
+                                                <input type="radio" name="recurring-option" class="send-check" id="recurring-option-4" value="Yearly">
+                                                <label for="recurring-option-4">Yearly</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-0">
+                                <div class="col-12 text-end mt-sm-2">
+                                    <div class="row g-0 justify-content-end">    
+                                        <div class="col-12 col-sm-auto">
+                                            <button class="btn btn-secondary"><i class="fas fa-angle-left"></i><span class="d-inline-block ms-1">Previous</span></button>
+                                            <button class="btn btn-success"><span class="d-inline-block">Save & Quit</span></button>
+                                            <button class="btn btn-apply"><span class="d-inline-block">Schedule</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="model success-model">
+        <div class="new">
+            <div class="row">
+                <div class="col mb-2 text-center">
+                    <img src="assets/images/success.gif" alt="">
+                    <h3>Success!</h3>
+                    <p>Message that you want..</p>
+                    <button class="btn solid-action-btn">Continue</button>
+                </div>
+            </div>
+            <div class="close">
+                <img src="assets/images/close.svg">
+            </div>
+        </div>
+    </div>
+    <div class="model failed-model">
+        <div class="new">
+            <div class="row">
+                <div class="col mb-2 text-center">
+                    <img src="assets/images/failed.gif" alt="">
+                    <h3 class="text-danger">OOOPS!</h3>
+                    <p>Message that you want..</p>
+                    <button class="btn btn-danger rounded-pill ps-4 pe-4">Try Again</button>
+                </div>
+            </div>
+            <div class="close">
+                <img src="assets/images/close.svg">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-md-7 text-center text-md-start align-self-center">
+                    <span class="copyright">© 2022 Automagic. All Rights Reserved</span>
+                </div>
+                <div class="col-md-5 d-grid d-md-block align-self-center">
+                    <div class="footer-social-list">
+                        <ul class="list-inline top-margin-20">
+                            <li>
+                                <a href="" target="blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="blank">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="blank">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="blank">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="blank">
+                                    <i class="fab fa-pinterest-p"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="node_modules/jquery-ui/jquery-ui.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

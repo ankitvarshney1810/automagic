@@ -92,6 +92,40 @@ h6{
     }
 }
 
+.btn-apply-primary{
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid $primary-color;
+    background-color: $primary-color;
+    &:hover{
+        background-color: #2736a7;
+        color: #fff;
+    }
+    @media(max-width:576px){
+        padding: 8px 12 px;
+        font-size: 12px;
+    }
+}
+
+.btn-apply-tertiary{
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid $tertiary-color;
+    background-color: $tertiary-color;
+    &:hover{
+        background-color: #132a4e;
+        color: #fff;
+    }
+    @media(max-width:576px){
+        padding: 8px 12 px;
+        font-size: 12px;
+    }
+}
+
 .btn-apply-outline{
     color: $secondary-color;
     padding: 8px 16px;
@@ -1111,6 +1145,41 @@ footer {
             ul {
                 list-style: initial!important;
             }
+        }
+    }
+}
+
+//Plan
+
+#plan{
+    align-items: unset;
+    .card{
+        text-align: center;
+        padding: 16px;
+        height: 100%;
+        .title{
+            font-size: 28px;
+        }
+        .pricing{
+            font-size: 34px;
+            font-weight: bold;
+            margin: 16px 0;
+            span{
+                font-size: 18px;
+            }
+        }
+        .range-box{
+            padding: 16px 0;
+            height: 113px;
+            .offer{
+                color: #707070;
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+        .features{
+            text-align: left;
+            padding: 16px 0;
         }
     }
 }

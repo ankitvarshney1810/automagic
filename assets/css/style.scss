@@ -492,6 +492,21 @@ section {
 		margin-bottom: 24px;
 		display: block;
 	}
+    .cta{
+		a{
+            color: #fff;
+		    background-color: $primary-color;	
+		    border-radius: 100px;
+		    padding: 0.75rem 2.5rem;
+		    font-weight: 600;
+            border: 2px solid transparent;
+            &:hover{
+                color: $primary-color;
+		        background-color: #f5f5f5;
+                border-color: $primary-color;
+            }
+        }
+	}
 }
 
 #what-about{
@@ -1101,7 +1116,7 @@ footer {
 }
 
 
-//FAQ
+//FAQ Page
 .faq-list {
     position: relative;
     display: block;
@@ -1149,10 +1164,128 @@ footer {
     }
 }
 
-//Plan
+//About Page
+.email-market{
+    padding: 0px 0 80px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    @media (max-width: 991px) {
+        min-height: initial;
+    }
+	.head-title {
+		color: #222222;
+		font-size: 3.5vw;
+		font-weight: 700;
+		line-height: 4.5vw;
+		margin-bottom: 16px;
+        @media (max-width: 991px) {
+            font-size: 40px;
+            line-height: 48px;
+        }
+        @media (max-width:767px) {
+            font-size: 32px;
+            line-height: 40px;
+        }
+	}
+	.sub-title {
+		color: #00000080;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: initial;
+		margin-bottom: 24px;
+		display: block;
+	}
+    .cta{
+		color: $primary-color;
+        border: 2px solid $primary-color;
+		background-color: #f5f5f5;	
+		border-radius: 100px;
+		padding: 0.75rem 2.5rem;
+		font-weight: 600;
+		&:hover{
+			background-color: $primary-color;
+            color: #ffffff;
+		}
+	}
+}
+.our-team-member{
+    .heading{
+        margin: 0 auto;
+		color: #333;
+        text-align: center;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+    }
+    .team-member-content{
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 200px;
+        position: relative;
+        &:hover{
+            .team-member-info{
+                transform: scale(1);
+            }
+        }
+        img{
+           width: 100%;
+           object-fit: cover;
+           object-position: top center;
+        }
+        .team-member-info{
+           position: absolute;
+           background-color: #4959D8aa;
+           border-radius: 200px;
+           display: flex;
+           z-index: 1;
+           top: 0;
+           left: 0;
+           right: 0;
+           bottom: 0;
+           flex-direction: column;
+           text-align: center;
+           justify-content: center;
+           transform: scale(0);
+           cursor: pointer;
+           .team-member-name{
+               font-size: 27px;
+               color: #fff;
+               font-weight: 600;
+           }
+           .team-member-profile{
+               color: #fff;
+               font-size: 18px;
+               margin-bottom: 12px;
+           }
+           .team-member-social-media{
+               margin: 6px auto;
+               a{
+                   background-color: #fff;
+                   padding: 5px 9px;
+                   border-radius: 40px;
+                   text-decoration: none;
+                   &:hover{
+                    background-color: #4959D8aa;
+                    color: #fff;
+                    transition: 1s;
+                   }
+                   i{
+                       font-size: 16px;
+                   }
+               }
+           }
+        }
+    }
 
+}
+
+
+//Plan Page
 #plan{
     align-items: unset;
+    background-color: #f5f5f5;
     .card{
         text-align: center;
         padding: 16px;
@@ -1180,6 +1313,159 @@ footer {
         .features{
             text-align: left;
             padding: 16px 0;
+        }
+    }
+}
+
+.call-back {
+    background-color: $secondary-color;
+    color: $light-color;
+    position: relative;
+    padding: 150px 0 80px;
+    .section-title {
+        font-weight: bold !important;
+        color: $light-color !important;
+        font-size: 24px !important;
+        display: block;
+        text-transform: capitalize;
+        position: relative;
+        text-align: center;
+        &::after {
+            content: '';
+            position: relative;
+            width: 40px;
+            height: 4px;
+            border-radius: 16px;
+            background-color: rgba($light-color, 1);
+            display: block;
+            margin: 1rem auto;
+        }
+    }
+    .form-des {
+        color: $light-color;
+        font-size: 16px;
+        opacity: .9;
+        display: block;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .form-input {
+        display: block;
+        position: relative;
+        margin-bottom: 1rem;
+        background-color: rgba($light-color, .2);
+        padding: 12px 16px;
+        border-radius: 8px;
+        &:hover {
+            background-color: rgba($light-color, .1);
+        }
+        label,
+        input,
+        select,
+        textarea {
+            display: block;
+            color: $light-color;
+        }
+        label {
+            margin-bottom: 0;
+            font-size: 12px;
+            opacity: .8;
+        }
+        input,
+        select,
+        textarea {
+            width: 100%;
+            border: none;
+            font-size: 16px;
+            padding: 0;
+            outline: none;
+            background-color: transparent;
+            font-weight: 500;
+            appearance: textfield;
+            &::placeholder{
+                color: #fff;
+            }
+        }
+        .filled {
+            font-size: 12px;
+            top: 8px;
+        }
+        // option{
+        //     color: $text-dark-color;
+        // }
+    }
+    .form-cta {
+        position: relative;
+        background-color: $primary-color;
+        color: $light-color;
+        border: none;
+        padding: .8rem 4rem;
+        text-align: center;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-top: 1rem;
+        outline: none;
+        border-radius: 8px;
+        &:hover {
+            filter: brightness(120%);
+        }
+        &:active {
+            filter: brightness(80%);
+        }
+    }
+}
+
+// Success Page
+
+.success{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    background-color: #f9f9f9;
+    .success-info{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        min-width: 320px;
+        width: 720px;
+        padding: 40px;
+        border-radius: 5px;
+        background-color: #fff;
+        text-align: center;
+        box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.2);
+        img{
+            width: 180px;
+            margin: 16px auto;
+        }
+        .danger{
+            color: #e25b5b !important;
+        }
+        .head{
+            margin: 16px auto;
+            font-size: 60px;
+            font-weight: bold;
+            color: $secondary-color;
+        }
+        span{
+            margin: 16px auto;
+            font-size: 25px;
+            color: #b4b4b4;
+        }
+        a{
+            display: inline-block;
+        }
+    }
+    @media(max-width:576px){
+        padding: 0 !important;
+        .success-info{
+            width: 100%;
+            height: 100%;
+            .head{
+                font-size: 40px;
+            }
+            span{
+                font-size: 18px;
+            }
         }
     }
 }

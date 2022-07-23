@@ -32,6 +32,21 @@
         </div>
     </header>
 
+    <section class="hero-area" id="about">
+        <div class="am-container">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <img src="assets/images/plan.png" class="d-block img-fluid mb-3" loading="lazy">
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <h2 class="head-title wow fadeInDown" data-wow-delay="0.1s">Our Plans</h2>
+                    <p class="mb-4 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quia cupiditate consequatur suscipit nisi. Nihil praesentium corporis atque incidunt inventore id aliquam provident eos consectetur nesciunt fuga, voluptatum porro neque rerum quasi fugit maxime!</p>
+                    <button class="btn cta"><a href="#plan">Show Plans</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="hero-area" id="plan">
         <div class="am-container">
             <div class="row">
@@ -111,7 +126,7 @@
                         <div class="text">For marketers who need more</div>
                         <div class="pricing"><span>Have more advanced needs?</span></div>
                         <div class="range-box"></div>
-                        <button class="btn btn-apply-tertiary rounded-pill w-75 my-4">Sign Up</button>
+                        <a href="#call-back" class="btn btn-apply-tertiary rounded-pill w-75 my-4">Sign Up</a>
                         <div class="features">
                             <span class="text">Everything in Premium, and:</span>
                             <ul>
@@ -131,6 +146,48 @@
         </div>
     </section>
 
+    <section class="call-back" id="call-back">
+        <div class="container">
+            <h4 class="section-title">Request a call back</h4>
+            <span class="form-des">Kindly fill the form to request a call back.</span>
+            <form action="">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-4">
+                        <div class="form-input">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="input-text" placeholder="Enter here" required="">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-4">
+                        <div class="form-input">
+                            <label for="mobile">Mobile Number</label>
+                            <input type="number" id="mobile" class="input-text" placeholder="Enter here" required="" maxlength="10">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-4">
+                        <div class="form-input">
+                            <label for="email">Email Id</label>
+                            <input type="email" id="email" class="input-text" placeholder="email@address">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div class="form-input">
+                            <label for="message" class="form-label">Requirement</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Write Your Requirement"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <span class="mt-2 mb-2 text-center error-message" role="alert">
+                            
+                        </span>
+                    </div>
+                    <div class="col-sm-12 text-center">
+                        <input type="submit" value="Submit" class="form-cta rounded-pill">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
     
     <footer>
         <div class="container">
